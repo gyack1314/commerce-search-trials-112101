@@ -1,0 +1,24 @@
+{
+  "synthetic": true,
+  "timezone": "UTC",
+  "tables": {
+    "judgements": [
+      {
+        "id": "j4",
+        "left_query": "q0-0",
+        "right_query": "q1-0",
+        "decision": "different_need",
+        "recorded_at": "2026-07-31T10:00:00+00:00",
+        "revises": "j1"
+      }
+    ],
+    "review_actions": [
+      {
+        "id": "split-request",
+        "kind": "split_relation",
+        "judgement_id": "j4",
+        "known_at": "2026-07-31T10:00:00+00:00"
+      }
+    ]
+  }
+}

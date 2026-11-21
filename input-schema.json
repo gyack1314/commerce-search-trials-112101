@@ -1,0 +1,109 @@
+{
+  "references": [
+    [
+      "queries",
+      "session_id",
+      "sessions",
+      "id"
+    ],
+    [
+      "orders",
+      "assignment_id",
+      "trial_assignments",
+      "id"
+    ],
+    [
+      "quotes",
+      "capacity_pool",
+      "capacity_pools",
+      "id"
+    ]
+  ],
+  "tables": {
+    "sessions": {
+      "id": "str",
+      "started_at": "str",
+      "known_at": "str",
+      "account_id": "str"
+    },
+    "queries": {
+      "id": "str",
+      "session_id": "str",
+      "query_index": "int",
+      "text": "str",
+      "constraints": "dict",
+      "reformulation_of": "NoneType",
+      "shown_offers": "list",
+      "clicked_offers": "list",
+      "known_at": "str"
+    },
+    "offers": {
+      "id": "str",
+      "name": "str",
+      "attributes": "list",
+      "ingredients": "list",
+      "unit_price": "int"
+    },
+    "availability": {
+      "id": "str",
+      "offer_id": "str",
+      "start": "str",
+      "end": "str",
+      "state": "str",
+      "known_at": "str"
+    },
+    "judgements": {
+      "id": "str",
+      "left_query": "str",
+      "right_query": "str",
+      "decision": "str",
+      "recorded_at": "str"
+    },
+    "quotes": {
+      "id": "str",
+      "offer_id": "str",
+      "covers_attributes": "list",
+      "forbidden_ingredients": "list",
+      "capacity_pool": "str",
+      "min_order": "int",
+      "units_per_slot": "int",
+      "unit_cost": "int",
+      "delivery_week": "str"
+    },
+    "capacity_pools": {
+      "id": "str",
+      "slots": "int",
+      "week": "str"
+    },
+    "trial_assignments": {
+      "id": "str",
+      "session_id": "str",
+      "offer_id": "str",
+      "assigned_at": "str",
+      "probability": "float",
+      "can_buy": "bool"
+    },
+    "orders": {
+      "id": "str",
+      "assignment_id": "str",
+      "quantity": "int",
+      "paid_at": "str",
+      "return_qty": "int",
+      "mature_at": "str",
+      "known_at": "str"
+    },
+    "review_actions": {
+      "id": "str",
+      "kind": "str",
+      "judgement_id": "str",
+      "known_at": "str"
+    },
+    "purchase_commitments": {
+      "id": "str",
+      "quote_id": "str",
+      "quantity": "int",
+      "state": "str",
+      "accepted_at": "str"
+    }
+  }
+}
